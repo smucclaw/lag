@@ -339,8 +339,6 @@ In the **deductive** mode, the reasoning engine follows the pattern of an
 expert system, calculating and explaining a particular answer based on
 facts provided or extracted from a user conversation.
 
-<details><summary>Abductive, Planning, and Constructive Modes</summary>
-
 In the **abductive** mode, the reasoning engine offers guesses at ways to
 arrive at a desired answer; if certain inputs have not been answered
 definitively, the reasoner suggests possibilities that might be worth
@@ -355,7 +353,7 @@ In the **constructive** mode, the reasoning engine offers feedback
 about design errors and potential loopholes in a propose ruleset,
 which defeat the purpose of the rules or could be exploited in an
 adversarial context.
-</details>
+
 
 
 
