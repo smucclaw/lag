@@ -62,36 +62,36 @@ It might be able to answer questions about insurance generally:
     Teach me about insurance policies generally, and personal accident death & disability policies specifically.
     </summary>
 
-([source: ChatGPT conversation with ChatGPT 4 on 2024-06-01](https://chatgpt.com/share/32e57d0b-9e86-4772-ba56-b49d4928f497))
-
-Insurance policies are agreements where an insurance company provides financial protection or reimbursement to an individual (the policyholder) against losses from specific events in exchange for a premium (a periodic payment). These policies are vital in managing risk and providing financial security.
-
-### General Types of Insurance Policies
-
-1. **Health Insurance**: Covers medical expenses for illnesses, injuries, and other health conditions.
-2. **Life Insurance**: Provides financial benefits to a deceased person's beneficiaries.
-3. **Auto Insurance**: Covers damages to a vehicle and liabilities from accidents.
-4. **Homeowners/Renters Insurance**: Protects against damage to residences and their contents.
-5. **Travel Insurance**: Covers cancellations, medical expenses abroad, and other travel-related losses.
-6. **Liability Insurance**: Protects against legal and financial liabilities resulting from injuries to other people or damage to their property.
-
-### Personal Accident Death & Disability Insurance
-
-This specific type of insurance provides coverage for the insured in the event of death or disability due to an accident. Here are key aspects of this policy:
-
-- **Coverage**: It typically includes death, permanent total disability, and sometimes temporary disabilities. The definitions of these terms can vary significantly between policies.
-  
-- **Benefit Payouts**: In the event of an accident leading to the insured's death, the policy pays out a lump sum to the beneficiaries. In cases of disability, the policy might pay out depending on the severity and type of disability (e.g., loss of limbs or eyesight).
-
-- **Scope of Coverage**: These policies can cover accidents occurring worldwide and are usually in effect 24/7. Some policies might exclude specific activities deemed high risk, like extreme sports.
-
-- **Exclusions**: Common exclusions might include accidents resulting from drug or alcohol use, self-inflicted injuries, and pre-existing conditions.
-
-- **Cost and Duration**: Premiums depend on several factors, including the policyholder's age, lifestyle, job risk, and the coverage scope. Policies might be available on a term basis (covering a specified period) or as a lifetime coverage.
-
-- **Claim Process**: In the event of an accident, the claim process involves submitting proof of the accident (like a medical report or police report) and evidence of the resulting death or disability. Insurers may require a detailed medical examination to verify claims of disability.
-
-Choosing the right insurance policy involves assessing one's personal needs, financial situation, and understanding the terms and conditions of the policy. It's advisable to compare different products and consult with an insurance professional to find the best fit.
+> ([source: ChatGPT conversation with ChatGPT 4 on 2024-06-01](https://chatgpt.com/share/32e57d0b-9e86-4772-ba56-b49d4928f497))
+> 
+> Insurance policies are agreements where an insurance company provides financial protection or reimbursement to an individual (the policyholder) against losses from specific events in exchange for a premium (a periodic payment). These policies are vital in managing risk and providing financial security.
+> 
+> ### General Types of Insurance Policies
+> 
+> 1. **Health Insurance**: Covers medical expenses for illnesses, injuries, and other health conditions.
+> 2. **Life Insurance**: Provides financial benefits to a deceased person's beneficiaries.
+> 3. **Auto Insurance**: Covers damages to a vehicle and liabilities from accidents.
+> 4. **Homeowners/Renters Insurance**: Protects against damage to residences and their contents.
+> 5. **Travel Insurance**: Covers cancellations, medical expenses abroad, and other travel-related losses.
+> 6. **Liability Insurance**: Protects against legal and financial liabilities resulting from injuries to other people or damage to their property.
+> 
+> ### Personal Accident Death & Disability Insurance
+> 
+> This specific type of insurance provides coverage for the insured in the event of death or disability due to an accident. Here are key aspects of this policy:
+> 
+> - **Coverage**: It typically includes death, permanent total disability, and sometimes temporary disabilities. The definitions of these terms can vary significantly between policies.
+>   
+> - **Benefit Payouts**: In the event of an accident leading to the insured's death, the policy pays out a lump sum to the beneficiaries. In cases of disability, the policy might pay out depending on the severity and type of disability (e.g., loss of limbs or eyesight).
+> 
+> - **Scope of Coverage**: These policies can cover accidents occurring worldwide and are usually in effect 24/7. Some policies might exclude specific activities deemed high risk, like extreme sports.
+> 
+> - **Exclusions**: Common exclusions might include accidents resulting from drug or alcohol use, self-inflicted injuries, and pre-existing conditions.
+> 
+> - **Cost and Duration**: Premiums depend on several factors, including the policyholder's age, lifestyle, job risk, and the coverage scope. Policies might be available on a term basis (covering a specified period) or as a lifetime coverage.
+> 
+> - **Claim Process**: In the event of an accident, the claim process involves submitting proof of the accident (like a medical report or police report) and evidence of the resulting death or disability. Insurers may require a detailed medical examination to verify claims of disability.
+> 
+> Choosing the right insurance policy involves assessing one's personal needs, financial situation, and understanding the terms and conditions of the policy. It's advisable to compare different products and consult with an insurance professional to find the best fit.
 
 </details>
 
@@ -107,52 +107,51 @@ specific policy contracts.
     Let's talk about https://www.manulife.com.sg/content/dam/insurance/sg/insurance-guides/accidental-death-coverage.pdf
     </summary>
 
-(source: groq.com conversation with Llama3-8b-8192 on 2024-06-01)
-
-The Accidental Death Coverage guide from Manulife Singapore!
-
-This guide provides a comprehensive overview of Accidental Death Coverage, which is a type of insurance that pays a lump-sum benefit to the beneficiary in the event of the insured's death due to an accident.
-
-Here are some key points from the guide:
-
-**What is Accidental Death Coverage?**
-
-Accidental Death Coverage is a type of insurance that provides a lump-sum benefit to the beneficiary in the event of the insured's death due to an accident. The benefit is paid regardless of the cause of death, as long as it is an accident.
-
-**Key Features:**
-
-1. **Accidental Death Benefit**: A lump-sum payment made to the beneficiary in the event of the insured's death due to an accident.
-2. **Accident Definition**: The policy defines what constitutes an accident, such as a sudden and unexpected event that results in injury or death.
-3. **Exclusions**: The policy may exclude certain types of accidents or injuries, such as those caused by war, terrorism, or intentional self-harm.
-4. **Waiting Period**: The policy may have a waiting period before coverage becomes effective, typically ranging from 14 to 30 days.
-5. **Benefit Period**: The policy may have a benefit period, which is the length of time that benefits are paid out, typically ranging from 2 to 5 years.
-
-**Benefits:**
-
-1. **Financial Protection**: Provides financial protection for the insured's dependents in the event of their death.
-2. **Peace of Mind**: Provides peace of mind for the insured and their loved ones, knowing that they are protected in the event of an accident.
-
-**Who Should Consider Accidental Death Coverage?**
-
-1. **High-Risk Occupations**: Individuals working in high-risk occupations, such as construction, manufacturing, or transportation.
-2. **Adventure Seekers**: Individuals who engage in high-risk hobbies or activities, such as extreme sports or traveling to high-risk areas.
-3. **Business Owners**: Business owners who rely on their income to support their families and want to ensure that their loved ones are protected in the event of their death.
-
-**How to Apply:**
-
-1. **Application**: Fill out the application form and provide required documents, such as identification and proof of income.
-2. **Premium Payment**: Pay the premium amount, which is typically paid annually or monthly.
-3. **Policy Issuance**: Receive the policy document and certificate of insurance.
-
-**Conclusion:**
-
-Accidental Death Coverage provides financial protection for individuals who are at risk of suffering a serious injury or death due to an accident. This type of insurance can provide peace of mind and financial security for the insured and their loved ones.
-
+> (source: groq.com conversation with Llama3-8b-8192 on 2024-06-01)
+> 
+> The Accidental Death Coverage guide from Manulife Singapore!
+> 
+> This guide provides a comprehensive overview of Accidental Death Coverage, which is a type of insurance that pays a lump-sum benefit to the beneficiary in the event of the insured's death due to an accident.
+> 
+> Here are some key points from the guide:
+> 
+> **What is Accidental Death Coverage?**
+> 
+> Accidental Death Coverage is a type of insurance that provides a lump-sum benefit to the beneficiary in the event of the insured's death due to an accident. The benefit is paid regardless of the cause of death, as long as it is an accident.
+> 
+> **Key Features:**
+> 
+> 1. **Accidental Death Benefit**: A lump-sum payment made to the beneficiary in the event of the insured's death due to an accident.
+> 2. **Accident Definition**: The policy defines what constitutes an accident, such as a sudden and unexpected event that results in injury or death.
+> 3. **Exclusions**: The policy may exclude certain types of accidents or injuries, such as those caused by war, terrorism, or intentional self-harm.
+> 4. **Waiting Period**: The policy may have a waiting period before coverage becomes effective, typically ranging from 14 to 30 days.
+> 5. **Benefit Period**: The policy may have a benefit period, which is the length of time that benefits are paid out, typically ranging from 2 to 5 years.
+> 
+> **Benefits:**
+> 
+> 1. **Financial Protection**: Provides financial protection for the insured's dependents in the event of their death.
+> 2. **Peace of Mind**: Provides peace of mind for the insured and their loved ones, knowing that they are protected in the event of an accident.
+> 
+> **Who Should Consider Accidental Death Coverage?**
+> 
+> 1. **High-Risk Occupations**: Individuals working in high-risk occupations, such as construction, manufacturing, or transportation.
+> 2. **Adventure Seekers**: Individuals who engage in high-risk hobbies or activities, such as extreme sports or traveling to high-risk areas.
+> 3. **Business Owners**: Business owners who rely on their income to support their families and want to ensure that their loved ones are protected in the event of their death.
+> 
+> **How to Apply:**
+> 
+> 1. **Application**: Fill out the application form and provide required documents, such as identification and proof of income.
+> 2. **Premium Payment**: Pay the premium amount, which is typically paid annually or monthly.
+> 3. **Policy Issuance**: Receive the policy document and certificate of insurance.
+> 
+> **Conclusion:**
+> 
+> Accidental Death Coverage provides financial protection for individuals who are at risk of suffering a serious injury or death due to an accident. This type of insurance can provide peace of mind and financial security for the insured and their loved ones.
 </details>
 
 ---
 
-The general pattern of a conversation looks like this:
+The general pattern of an insurance coverage query looks like this:
 
   - As a holder of policy `PolContract`,
   - if I got into an accident on date `AccDate`, 
@@ -160,8 +159,8 @@ The general pattern of a conversation looks like this:
   - after having previously renewed my policy on occasions `RenewalDates = [RD1, RD2, RD3]`
   - and suffered injuries `Injuries = [I1, I2, I3]`
   - and sought treatment with `MedicalCare = [ { CareDate: Date, Amount: Money, Vendor: Name }, ... ]`
-  - Question 1: what expense reimbursement payout am I entitled to?
-  - Question 2: what accidental death or disability payout am I entitled to?
+  - *Question 1*: what expense reimbursement payout am I entitled to?
+  - *Question 2*: what accidental death or disability payout am I entitled to?
   - Give specific details of how the payouts are calculated and why
     specific components are include or excluded based on qualifying
     conditions associated with the specific circumstances of the
@@ -173,10 +172,18 @@ such questions with confidence and detail. See [Insurance Conversation
 1](./conversation1.md) for an actual chatbot conversation containing
 errors.
 
-Improving the logical performance "from within" is an active area of
-research. The LAG approach says, "we need to hedge those bets; let's
-put up some guardrails around the LLM and bring up some cold iron to
-do the hard thinking in black and white, to produce answers that we
+As of 2024, improving the logical performance "from within" is an
+active area of research. The reasoning shown in GPT4 is an impressive
+improvement over that shown in GPT3.5. Is it possible that future
+generations of LLMs will become capable of purely logical reasoning
+using the current architecture? Yes -- but unlikely, according to
+experts, who suggest that a "systems of experts" architecture, and
+function calls to externals plugins, may be needed to achieve desired
+accurancy.
+
+Accordingly, the LAG approach says, "we need to hedge those bets;
+let's put up some guardrails around the LLM and build some cold iron
+to do the hard thinking in black and white, to produce answers that we
 stand behind."
 
 The LAG approach adds these components:
@@ -192,7 +199,7 @@ If areas of vagueness or ambiguity remain in the source material, the
 process of logical reasoning will at least uncover them and make them
 explicit to all parties concerned.
 
-## Context: Software Engineering Background
+## Context: Function Calling a Logic-Augmented-Generation API
 
 The prototype software in this repo augments a chatbot conversation
 with logic.
@@ -273,15 +280,12 @@ In this example the rulebase operates against an event with a date and name, and
 ```
 </details>
 
-The LLM server is instructed to extract the relevant terms from free-text end-user input.
-
-
-<details>
-<summary>System prompt for JSON extraction</summary>
+The LLM server is instructed to extract the relevant terms from free-text end-user input. In the absence of native capabilities for JSON structuring, a possible system prompt could backfill that functionality:
 
 ``` json
     {"role": "system",
-     "content": "Extract from user input a JSON representation of key facts conforming to the following JSON schema. If a fact is not found in the input, omit it from the JSON output." }
+     "content": "Extract from user input a JSON representation of key facts conforming to the given JSON schema. If a fact is not found in the input, omit it from the JSON output."
+     }
 ```
 
 ``` mermaid
@@ -309,11 +313,11 @@ sequenceDiagram
 
     B->>A: Before we can answer your question in detail, we just need to get a little more information...
 ```
-</details>
-
 For more details on how to constrain output to JSON format, see the following:
 
 https://www.reddit.com/r/LocalLLaMA/comments/17a4zlf/reliable_ways_to_get_structured_output_from_llms/
+
+Equivalently, some LLMs are capable of a [function calling](https://platform.openai.com/docs/guides/function-calling) interface, which serves essentially the same purpose as the above.
 
 
 ## success criteria for demo 1
@@ -325,9 +329,7 @@ https://www.reddit.com/r/LocalLLaMA/comments/17a4zlf/reliable_ways_to_get_struct
   - decision answer; basis for reasoning; citations to original source text
 - system passes the JSON response to LLM, instructing transformation to a natural language explanation, with context of previous user conversation.
 
-## Additional Context
-
-### Reasoning Modes
+## Reasoning Modes
 
 Four major modes of reasoning are envisioned. The first version of
 this software supports the first mode. Future versions will support
