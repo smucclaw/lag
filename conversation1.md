@@ -4,6 +4,8 @@ In this conversation, domain experts will find at least two
 inaccuracies. Misrepresentations made by chatbot can lead to big
 trouble.
 
+Source: https://chatgpt.com/share/32e57d0b-9e86-4772-ba56-b49d4928f497
+
 ## Let's explore a scenario in which I, the insured party, accidentally die during a sky-diving event. Will the policy pay out?
 
 In the scenario where you, the insured party, accidentally die during a sky-diving event, the policy would not pay out. The document specifies that accidental death benefits do not cover deaths resulting from participation in professional and dangerous sports such as sky-diving, especially if performed in a capacity where the individual earns income, such as an instructor or coach. This exclusion is listed to manage the high risks associated with such activities.
