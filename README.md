@@ -169,7 +169,9 @@ The general pattern of a conversation looks like this:
   - Link to relevant supporting statements in the policy contract.
 
 Current-generation chatbots based on LLMs are not capable of answering
-such questions with confidence and detail.
+such questions with confidence and detail. See [Insurance Conversation
+1](./conversation1.md) for an actual chatbot conversation containing
+errors.
 
 Improving the logical performance "from within" is an active area of
 research. The LAG approach says, "we need to hedge those bets; let's
@@ -189,8 +191,6 @@ to the maximum mathematically possible.
 If areas of vagueness or ambiguity remain in the source material, the
 process of logical reasoning will at least uncover them and make them
 explicit to all parties concerned.
-
-See [Insurance Conversation 1](./conversation1.md) for an actual chatbot conversation containing errors.
 
 ## Context: Software Engineering Background
 
@@ -311,7 +311,7 @@ sequenceDiagram
 ```
 </details>
 
-For more details on how to constraint output to JSON format, see the following:
+For more details on how to constrain output to JSON format, see the following:
 
 https://www.reddit.com/r/LocalLLaMA/comments/17a4zlf/reliable_ways_to_get_structured_output_from_llms/
 
