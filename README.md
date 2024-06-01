@@ -93,9 +93,9 @@ This specific type of insurance provides coverage for the insured in the event o
 
 Choosing the right insurance policy involves assessing one's personal needs, financial situation, and understanding the terms and conditions of the policy. It's advisable to compare different products and consult with an insurance professional to find the best fit.
 
----
-
 </details>
+
+---
 
 Thanks to RAG, it may be able to answer questions about one or more
 specific policy contracts.
@@ -152,9 +152,7 @@ Accidental Death Coverage provides financial protection for individuals who are 
 
 ---
 
-However, if the end-user wants to get into a detailed conversation
-about specifics, the chatbot might not be able to answer questions
-of the form
+The general pattern of a conversation looks like this:
 
   - As a holder of policy `PolContract`,
   - if I got into an accident on date `AccDate`, 
@@ -170,7 +168,16 @@ of the form
     accident.
   - Link to relevant supporting statements in the policy contract.
 
-To be able to answer the above query correctly and in detail, additional components are needed:
+Current-generation chatbots based on LLMs are not capable of answering
+such questions with confidence and detail.
+
+Improving the logical performance "from within" is an active area of
+research. The LAG approach says, "we need to hedge those bets; let's
+put up some guardrails around the LLM and bring up some cold iron to
+do the hard thinking in black and white, to produce answers that we
+stand behind."
+
+The LAG approach adds these components:
 
 - a formal representation of the "business logic" -- which may be grounded in legislative, regulative, or contractual rules
 - a reasoning engine with rigorous semantics capable of answering deductive and abductive queries
@@ -182,6 +189,8 @@ to the maximum mathematically possible.
 If areas of vagueness or ambiguity remain in the source material, the
 process of logical reasoning will at least uncover them and make them
 explicit to all parties concerned.
+
+See [Insurance Conversation 1](./conversation1.md) for an actual chatbot conversation containing errors.
 
 ## Context: Software Engineering Background
 
