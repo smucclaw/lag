@@ -39,13 +39,13 @@ Together, LLMs, RAG, and LAG systems deliver the paradigm of "[neuro-symbolic AI
 While chain-of-thought prompting and other techniques may be used to
 persuade LLM AIs to think as logically as they possibly can, a
 fundamentally different architecture -- symbolic, rather than neural
--- is required for structured reasoning in domains to do with law,
+-- is required for structured reasoning in high-stakes domains to do with law,
 contracts, and money.
 
 ## Context: Application Background and Pain Points
 
 We consider a scenario in which an existing third-party chatbot app
-requires detailed reasoning beyond its currents capabilities.
+requires detailed reasoning beyond its current capabilities.
 
 The chatbot might have been developed using ChatGPT or Llama or Gemini
 or Claude or similar.
@@ -55,9 +55,11 @@ to specialize in a domain such as insurance.
 
 It might be able to answer questions about insurance generally:
 
+---
+
 <details>
     <summary>
-    *Teach me about insurance policies generally, and personal accident death & disability policies specifically.*
+    Teach me about insurance policies generally, and personal accident death & disability policies specifically.
     </summary>
 
 ([source: ChatGPT conversation with ChatGPT 4 on 2024-06-01](https://chatgpt.com/share/32e57d0b-9e86-4772-ba56-b49d4928f497))
@@ -91,16 +93,18 @@ This specific type of insurance provides coverage for the insured in the event o
 
 Choosing the right insurance policy involves assessing one's personal needs, financial situation, and understanding the terms and conditions of the policy. It's advisable to compare different products and consult with an insurance professional to find the best fit.
 
-
+---
 
 </details>
 
 Thanks to RAG, it may be able to answer questions about one or more
 specific policy contracts.
 
+---
+
 <details>
     <summary>
-    *Let's talk about https://www.manulife.com.sg/content/dam/insurance/sg/insurance-guides/accidental-death-coverage.pdf*
+    Let's talk about https://www.manulife.com.sg/content/dam/insurance/sg/insurance-guides/accidental-death-coverage.pdf
     </summary>
 
 (source: groq.com conversation with Llama3-8b-8192 on 2024-06-01)
@@ -145,6 +149,8 @@ Accidental Death Coverage is a type of insurance that provides a lump-sum benefi
 Accidental Death Coverage provides financial protection for individuals who are at risk of suffering a serious injury or death due to an accident. This type of insurance can provide peace of mind and financial security for the insured and their loved ones.
 
 </details>
+
+---
 
 However, if the end-user wants to get into a detailed conversation
 about specifics, the chatbot might not be able to answer questions
