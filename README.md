@@ -218,6 +218,17 @@ graph LR
     C--"LAG API"-->E["LAG Rule Engine Server"]
 ```
 
+Alternatively, the native function calling API could make the call:
+
+``` mermaid
+graph LR
+    A["End-User"]--"natural language"-->B["Web/Mobile App Front-End"]
+    B--"REST API"-->C["UI API service"]
+    C--"LLM API"-->D["LLM server"]
+    D--"function calling\nLAG API"-->E["LAG Rule Engine Server"]
+```
+
+
 ### API
 
 By default, the chatbot application typically hands off queries to a pre-trained, prompt-engineered LLM.
