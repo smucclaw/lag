@@ -328,7 +328,7 @@ For more details on how to constrain output to JSON format, see the following:
 
 https://www.reddit.com/r/LocalLLaMA/comments/17a4zlf/reliable_ways_to_get_structured_output_from_llms/
 
-Equivalently, some LLMs are capable of a [function calling](https://platform.openai.com/docs/guides/function-calling) interface, which serves essentially the same purpose as the above.
+Equivalently, some LLMs are capable of a [function calling](https://platform.openai.com/docs/guides/function-calling) interface, which serves essentially the same purpose as the above. See the [OpenAI Cookbook](https://cookbook.openai.com/examples/how_to_call_functions_with_chat_models).
 
 
 ## success criteria for demo 1
@@ -338,6 +338,18 @@ Equivalently, some LLMs are capable of a [function calling](https://platform.ope
 - the rule engine API responds with a structured JSON response, being one of
   - insufficient data to decide about goal; please ask for the following variables: `[v1, v2, ... vN]`
   - decision answer; basis for reasoning; citations to original source text
+- system passes the JSON response to LLM, instructing transformation to a natural language explanation, with context of previous user conversation.
+
+## success criteria for demo 2
+
+- system relies on LLM to extract output from free text conversation in JSON format
+- **system pours the user-input JSON into a slightly-more-formal representation of the query, and restates that representation back to the user, asking the user to confirm that is what they actually meant. This step could involve GF.**
+- **iterate a few times until the user and the system agree they understand the query**
+- system feeds the agreed query JSON to the rule engine API, in deductive mode, with a desired goal in mind
+- the rule engine API responds with a structured JSON response, being one of
+  - insufficient data to decide about goal; please ask for the following variables: `[v1, v2, ... vN]`
+  - decision answer; basis for reasoning; citations to original source text
+- **add layer of processing here for GF to help massage the response structure.**
 - system passes the JSON response to LLM, instructing transformation to a natural language explanation, with context of previous user conversation.
 
 ## Reasoning Modes
