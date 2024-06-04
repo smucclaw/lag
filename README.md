@@ -333,24 +333,24 @@ Equivalently, some LLMs are capable of a [function calling](https://platform.ope
 
 ## success criteria for demo 1
 
-- system relies on LLM to extract output from free text conversation in JSON format
-- system feeds the extracted JSON to the rule engine API, in deductive mode, with a desired goal in mind
-- the rule engine API responds with a structured JSON response, being one of
+- system relies on LLM to extract output from free text conversation in some structured format, e.g. JSON or something obeying a grammar
+- system feeds the extracted format to the rule engine API, in deductive mode, with a desired goal in mind
+- the rule engine API responds with a structured response, being one of
   - insufficient data to decide about goal; please ask for the following variables: `[v1, v2, ... vN]`
   - decision answer; basis for reasoning; citations to original source text
-- system passes the JSON response to LLM, instructing transformation to a natural language explanation, with context of previous user conversation.
+- system passes the response to LLM, instructing transformation to a natural language explanation, with context of previous user conversation.
 
 ## success criteria for demo 2
 
-- system relies on LLM to extract output from free text conversation in JSON format
-- **system pours the user-input JSON into a slightly-more-formal representation of the query, and restates that representation back to the user, asking the user to confirm that is what they actually meant. This step could involve GF.**
+- system relies on LLM to extract output from free text conversation in some structured format, e.g. JSON or something obeying a grammar
+- **system pours the user input into a slightly-more-formal representation of the query, and restates that representation back to the user, asking the user to confirm that is what they actually meant. This step could involve GF.**
 - **iterate a few times until the user and the system agree they understand the query**
-- system feeds the agreed query JSON to the rule engine API, in deductive mode, with a desired goal in mind
-- the rule engine API responds with a structured JSON response, being one of
+- system feeds the agreed query to the rule engine API, in deductive mode, with a desired goal in mind
+- the rule engine API responds with a structured response, being one of
   - insufficient data to decide about goal; please ask for the following variables: `[v1, v2, ... vN]`
   - decision answer; basis for reasoning; citations to original source text
 - **add layer of processing here for GF to help massage the response structure.**
-- system passes the JSON response to LLM, instructing transformation to a natural language explanation, with context of previous user conversation.
+- system passes the response to LLM, instructing transformation to a natural language explanation, with context of previous user conversation.
 
 ## Reasoning Modes
 
