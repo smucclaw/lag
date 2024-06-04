@@ -340,6 +340,113 @@ Equivalently, some LLMs are capable of a [function calling](https://platform.ope
   - decision answer; basis for reasoning; citations to original source text
 - system passes the response to LLM, instructing transformation to a natural language explanation, with context of previous user conversation.
 
+We assume we already have:
+- some ruleset that has been encoded in L4 or in MathLang
+- a data model for the desired inputs (and outputs)
+
+We need to build an API server/service that, given inputs from the client, performs the computation and returns a result.
+
+Sometimes the answer is "insufficient data".
+
+### Skydiving Example
+
+For example, the input fact database could be:
+
+- I got injured in a sky-diving accident two weeks ago while overseas on a military trip as part of full-time NS.
+- As you know the customer has a Plan A ($200,000) and has renewed 5 times without making any claims.
+
+The goal:
+
+- How much do I get paid?
+
+The answer:
+
+- $230,000, because you were
+  - doing skydiving
+  - as NS
+  - not as an instructor
+  - which is addressed in paragraph 6(f)
+  - and you originally had a $200,000 policy
+  - which is boosted by $30,000
+  - because you renewed your policy with us 3 times at 5% per year.
+
+### Must-Sing Example
+
+The ruleset could be:
+- Every person who walks, and eats or drinks, must sing.
+
+The input fact database could be:
+- I drink.
+- I don't walk.
+
+The goal:
+- Must I sing?
+
+The answer:
+- No, because you don't walk.
+
+### Interface Schema
+
+The following schema is suitable for ChatGPT function-calling:
+
+``` json
+tools = [
+    {
+        "type": "function",
+        "function": {
+            "name": "compute_qualifies",
+            "description": "Determine if a person qualifies for the purposes of the rule about singing. The input object describes the person's properties: walks, eats, drinks. It is given that a person drinks whether or not they consume an alcoholic or a non-alcoholic beverage, in part or in whole, so those specific details don't really matter.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "walks": {
+                        "type": "boolean",
+                        "description": "Did the person walk?",
+                    },
+                    "eats": {
+                        "type": "boolean",
+                        "description": "Did the person eat?",
+                    },
+                    "drinks": {
+                        "type": "boolean",
+                        "description": "Did the person drink?",
+                    },
+                    "an alcoholic": {
+                        "type": "boolean",
+                        "description": "Did the person drink an alcoholic beverage?",
+                    },
+                    "a non-alcoholic": {
+                        "type": "boolean",
+                        "description": "Did the person drink a non-alcoholic beverage?",
+                    },
+                    "in part": {
+                        "type": "boolean",
+                        "description": "Did the person drink part of the beverage?",
+                    },
+                    "in whole": {
+                        "type": "boolean",
+                        "description": "Did the person drink all of the beverage?",
+                    },
+                }
+            }
+        }
+    }
+]
+
+```
+
+This schema (or something very like it) is automatically generated
+from the L4 JSON Schema transpiler. The description fields were
+entered by hand in the above JSON snipped, but in future they could
+come from the spreadsheet itself.
+
+With this `tools`, we can now construct a function call of the form
+
+``` javascript
+Function( { "walk": true, "eat": false } )
+```
+
+
 ## success criteria for demo 2
 
 - system relies on LLM to extract output from free text conversation in some structured format, e.g. JSON or something obeying a grammar
@@ -351,6 +458,15 @@ Equivalently, some LLMs are capable of a [function calling](https://platform.ope
   - decision answer; basis for reasoning; citations to original source text
 - **add layer of processing here for GF to help massage the response structure.**
 - system passes the response to LLM, instructing transformation to a natural language explanation, with context of previous user conversation.
+
+## Success Metrics for demo 1 and demo 2
+
+1. externally, we compare LAG-less "vanilla" LLM reasoning with LAGgy reasoning relying on the rule engine
+
+2. internally, the rule engine should operate correctly; given inputs, it should return the correct outputs, as defined in the L4 encoding which parses to some kind of mathlang
+
+
+
 
 ## Reasoning Modes
 
