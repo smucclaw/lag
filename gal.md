@@ -10,8 +10,7 @@ Together, LAG + GAL = LAGAL.
 ``` mermaid
 graph TD
 
-    Source["Natural Language Text"]
-	Source--"extraction"-->["Encoding"]
+    Source["Natural Language Text"]--"extraction"-->["Encoding"]
 
 
 ```

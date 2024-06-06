@@ -38,7 +38,11 @@ const mustSing_tools = [
     }
 ]
 
-
+// EVERY Person
+//  WHO  walks
+//  AND  eats
+//    OR drinks
+//  MUST sing
 
 
 async function main() {
