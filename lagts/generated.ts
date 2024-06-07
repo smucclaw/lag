@@ -6,6 +6,10 @@ export function setup (symtab : any) {
     return tsm.initSymTab(transformedJson)
   }
 
+// This is a temporary hack, just to make the Must Sing 5 example work.
+// TODO: once we have a robust pipeline from
+// sreadsheet -> schema -> LLM outputs values for user input using that same schema
+// then we don't need to massage the schema because it will already have the same field names
 function transformJson(input: { [key: string]: string }): { [key: string]: string } {
     const result: { [key: string]: string } = {};
 

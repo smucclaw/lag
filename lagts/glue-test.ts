@@ -1,6 +1,7 @@
 
-//import * as tsm from '../../usecases/sect10-typescript/mathlang';
-import { setup, exprReduce, myshow, Qualifies } from './generated';
+//import * as tsm from '../../usecases/sect10-typescript/src/mathlang';
+import { setup, exprReduce, myshow, Qualifies, Drinks } from './generated';
+import { transpile } from './tojson'
 
 const mengs_output = { "index":0
 , "message":
@@ -12,7 +13,13 @@ const mengs_output = { "index":0
             , "type":"function"
             , "function":
                 { "name":"compute_qualifies"
-                , "arguments": {"walks": "true", "eats": "false", "drinks": "true", "beverage type": "non-alcoholic", "in whole": "unknown"}
+                , "arguments": {
+                    "walks": "false",
+                    "eats": "false",
+                    "drinks": "false",
+                    "beverage type": "non-alcoholic",
+                    "in whole": "unknown"
+                    }
                 }
             }
         ]
@@ -31,10 +38,13 @@ function get_values(input: any) {
 function go(user_input:any) {
     setup(user_input);
     const expr = Qualifies()
+    const output = transpile(expr)
+    console.log(output)
+
     const asDict = exprReduce(expr)
 
-    const exprval = asDict.testPoint ? Math.round(asDict.testPoint) : expr.val
-    console.log("The whole expression evaluates to:", exprval, "\n\n")
+    // const exprval = asDict.testPoint ? asDict.testPoint : expr.val
+    console.log("The whole expression evaluates to:", expr.val, "\n\n")
 
 
     console.log (`** input JSON`)
