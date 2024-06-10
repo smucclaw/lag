@@ -30,7 +30,7 @@ LAG is intended to help counter hallucinations; better make sense of
 RAG content; and answer queries with greater detail, correctness, and
 confidence.
 
-The relationship between RAG and LAG finds analogy in the metaphor of
+The relationship between RAG+LLM and LAG finds analogy in the metaphor of
 left-brain vs right-brain, or perhaps the "System 1 / System 2"
 dichotomy popularized in Daniel Kahneman's *Thinking, Fast and Slow*.
 
