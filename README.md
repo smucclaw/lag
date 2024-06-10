@@ -199,6 +199,46 @@ If areas of vagueness or ambiguity remain in the source material, the
 process of logical reasoning will at least uncover them and make them
 explicit to all parties concerned.
 
+
+``` mermaid
+graph TB
+    subgraph LLM ["LLM e.g. GPT"]
+       LLM1["Parsing and\nFunction Calling\ninterface"]
+       LLM3["Rule Transformer\nfrom natural language\nto L4"]
+       LLM2["Explanation Renderer"]
+    end
+    subgraph FrontEnd ["Frontend"]
+      EU1["End User"]--"converses with"-->CB1["Chatbot UI"]
+      CB1--"elicits"-->F
+      CB2["Chatbot UI"]--"answers"-->EU2["End User"]
+    end
+    
+    F["User Input"]--"extracted by"-->LLM1
+    LLM1--"produces"-->SD
+
+    subgraph IL ["LAG Interface Layer"]
+        SD["Structured User Input\n(JSON)"]
+        SR["Structured Response\ncontaining\nexplanation\n(JSON)"]
+    end
+
+    SD--"fed to"-->LAG
+
+    subgraph RI ["Rule Ingestion Phase (offline)"]
+       ER["Existing Legal or\nBusiness Rules"]--"spidered by"-->RB["LAG Rule Builder"]
+    end
+    RB--"employs"-->LLM3
+    LLM3--"produces"-->BOK
+
+    subgraph LAGRuntime ["LAG Decision Service"]
+      BOK["Formalized Rules\n(L4)"]--"consulted by"-->LAG
+      LAG["LAG Rule Execution Engine\napplies formalized rules\nto user input,\nproducing answers\ntogether with\nexplanations"]
+    end
+
+    LAG--"returns"-->SR
+    SR--"dressed up by"-->LLM2
+    LLM2--"returns high-quality\nexplanation to"-->CB2
+```
+
 ## Context: Function Calling a Logic-Augmented-Generation API
 
 The prototype software in this repo augments a chatbot conversation
@@ -229,7 +269,7 @@ graph LR
 ```
 
 
-### API
+### API Architecture History
 
 By default, the chatbot application typically hands off queries to a pre-trained, prompt-engineered LLM.
 
@@ -498,7 +538,15 @@ adversarial context.
 
 ## See Also
 
+- [Hallucination-Free?](https://dho.stanford.edu/wp-content/uploads/Legal_RAG_Hallucinations.pdf)
 - Rainbird uses a similar term, "Retrieval Augmented Reasoning" (RAR): https://rainbird.ai/beyond-rag-why-retrieval-augmented-reasoning-rar-is-a-game-changer/
+- [Certified Deductive Reasoning with Language Models](https://openreview.net/forum?id=yXnwrs2Tl6) 2024-05-29
+- [BPMN-style AI](https://techcrunch.com/2024/06/06/tektonic-ai-raises-10m-to-build-genai-agents-for-automating-business-operations/)
+- [Milvus and WhyHow](https://medium.com/enterprise-rag/milvus-integrated-into-whyhow-ais-open-source-rule-based-retrieval-package-835c8549f280)
+- [Graph of Thoughts](https://github.com/spcl/graph-of-thoughts)
+- [Significant new capabilities make it easier to use Amazon Bedrock to build and scale generative AI applications – and achieve impressive results](https://aws.amazon.com/blogs/machine-learning/new-capabilities-make-it-easier-to-use-amazon-bedrock-to-build-and-scale-generative-ai-applications-and-deliver-impact/)
+- [Knowledge Graph vs. Vector RAG](https://neo4j.com/developer-blog/knowledge-graph-vs-vector-rag/)
+
 
 ## Footnote
 
