@@ -43,6 +43,16 @@ export function myshow(expr: tsm.Expr<any>) : tsm.Expr<any> {
     return expr
   }
 
+export function updateRecord(existing: Record<string, any>, updates: Record<string, any>): Record<string, any> {
+    for (const key in updates) {
+        if (updates.hasOwnProperty(key)) {
+            if (existing[key] === undefined) {
+                existing[key] = updates[key];
+            }
+        }
+    }
+    return existing;
+  }
 
 // TODO: these should be added here by transpiling the spreadsheet
 export const Qualifies = () => {return new tsm.BoolFold ( "Qualifies"

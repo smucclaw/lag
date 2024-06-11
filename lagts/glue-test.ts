@@ -14,11 +14,11 @@ const mengs_output = { "index":0
             , "function":
                 { "name":"compute_qualifies"
                 , "arguments": {
-                    "walks": "false",
+                    "walks": "true",
                     "eats": "false",
-                    "drinks": "false",
+                    "drinks": "unknown",
                     "beverage type": "non-alcoholic",
-                    "in whole": "unknown"
+                    "in whole": "true"
                     }
                 }
             }
@@ -37,20 +37,15 @@ function get_values(input: any) {
 // Maybe there's a better place for it???
 function go(user_input:any) {
     setup(user_input);
-    const expr = Qualifies()
-    const output = transpile(expr)
-    console.log(output)
+    const drinks = Drinks()
+    const asDict = exprReduce(drinks)
+    updateRecord(tsm.symTab, {...asDict})
 
-    const asDict = exprReduce(expr)
+    const expr = Qualifies()
+
 
     // const exprval = asDict.testPoint ? asDict.testPoint : expr.val
     console.log("The whole expression evaluates to:", expr.val, "\n\n")
-
-
-    console.log (`** input JSON`)
-    console.log (`#+BEGIN_SRC js`)
-    console.log (JSON.stringify(user_input, null, 2))
-    console.log (`#+END_SRC`)
 
     myshow(expr)
 
@@ -58,7 +53,14 @@ function go(user_input:any) {
     console.log (`#+BEGIN_SRC js`)
     console.log(JSON.stringify(exprReduce(expr), null, 2))
     console.log (`#+END_SRC`)
-  }
 
-// This returns a bunch of nonsense
+    // create JSON from the interns' version
+    // const output = transpile(expr)
+    // const json_obj = JSON.stringify(output, null, 2);
+
+    // writeFile("data.json", json_obj.toString(), (err) => {
+    //   if (err) throw err;
+    // })
+}
+
 go(get_values(mengs_output))
