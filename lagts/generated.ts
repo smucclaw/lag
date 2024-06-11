@@ -10,19 +10,21 @@ export function setup (symtab : any) {
 // TODO: once we have a robust pipeline from
 // sreadsheet -> schema -> LLM outputs values for user input using that same schema
 // then we don't need to massage the schema because it will already have the same field names
-function transformJson(input: { [key: string]: string }): { [key: string]: string } {
-    const result: { [key: string]: string } = {};
+function transformJson(input: { [key: string]: any }): { [key: string]: any } {
+    const result: { [key: string]: any } = {};
 
     for (const key in input) {
         if (input.hasOwnProperty(key)) {
             const value = input[key];
 
             // Check if the value is true, false or unknown
-            if (value === "true" || value === "false" || value === "unknown") {
-                result[key] = value ;
+            if (String(value) === "true" || String(value) === "false") {
+                result[key] = (value === "true") ;
+            } else if (value === "unknown") {
+                result[key] = undefined ;
             } else {
                 // If value is none of these, transform it to a key with value "true"
-                result[value] = "true";
+                result[value] = true;
             }
         }
     }
