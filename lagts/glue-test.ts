@@ -1,7 +1,6 @@
 
-//import * as tsm from '../../usecases/sect10-typescript/src/mathlang';
-import { setup, exprReduce, myshow, Qualifies, Drinks } from './generated';
-import { transpile } from './tojson'
+import * as tsm from '../../usecases/sect10-typescript/src/mathlang';
+import { setup, exprReduce, myshow, Qualifies, Drinks, extendRecord } from './generated';
 
 const mengs_output = { "index":0
 , "message":
@@ -36,11 +35,16 @@ function get_values(input: any) {
 // This is copied and simplified from usecases/sect10-typescript/crunch.ts
 // Maybe there's a better place for it???
 function go(user_input:any) {
-    setup(user_input);
+    setup(user_input); // modifies global variable tsm.symTab
+
+    // evaluating Drinks gives us new values in a dictionary
     const drinks = Drinks()
     const asDict = exprReduce(drinks)
-    updateRecord(tsm.symTab, {...asDict})
 
+    // we extend the symtab (of user inputs) with the newly evaluated Drinks
+    extendRecord(tsm.symTab, {...asDict})
+
+    // with the value of "drinks" coming from Drinks(), we can now evaluate Qualifies
     const expr = Qualifies()
 
 
@@ -53,14 +57,6 @@ function go(user_input:any) {
     console.log (`#+BEGIN_SRC js`)
     console.log(JSON.stringify(exprReduce(expr), null, 2))
     console.log (`#+END_SRC`)
-
-    // create JSON from the interns' version
-    // const output = transpile(expr)
-    // const json_obj = JSON.stringify(output, null, 2);
-
-    // writeFile("data.json", json_obj.toString(), (err) => {
-    //   if (err) throw err;
-    // })
 }
 
 go(get_values(mengs_output))

@@ -1,6 +1,7 @@
 import * as tsm from '../../usecases/sect10-typescript/src/mathlang';
 export { exprReduce, asDot } from '../../usecases/sect10-typescript/src/mathlang';
 
+// sets up a global variable tsm.symTab. Also copied from Meng's usecases code
 export function setup (symtab : any) {
     const transformedJson = transformJson(symtab);
     return tsm.initSymTab(transformedJson)
@@ -31,6 +32,7 @@ function transformJson(input: { [key: string]: any }): { [key: string]: any } {
     return result;
 }
 
+// copied from Meng's old code in usecases and shortened
 export function myshow(expr: tsm.Expr<any>) : tsm.Expr<any> {
     console.log("** " + expr.val)
     tsm.explTrace(expr, 3)
@@ -43,7 +45,8 @@ export function myshow(expr: tsm.Expr<any>) : tsm.Expr<any> {
     return expr
   }
 
-export function updateRecord(existing: Record<string, any>, updates: Record<string, any>): Record<string, any> {
+// used to extend the symtab after evaluating different expressions
+export function extendRecord(existing: Record<string, any>, updates: Record<string, any>): Record<string, any> {
     for (const key in updates) {
         if (updates.hasOwnProperty(key)) {
             if (existing[key] === undefined) {
@@ -55,6 +58,7 @@ export function updateRecord(existing: Record<string, any>, updates: Record<stri
   }
 
 // TODO: these should be added here by transpiling the spreadsheet
+// this thing is actually generated
 export const Qualifies = () => {return new tsm.BoolFold ( "Qualifies"
                  , tsm.BoolFoldOp.All
                  , [ new tsm.GetVar ("walks")
