@@ -1,5 +1,5 @@
 
-import * as tsm from '../../usecases/sect10-typescript/src/mathlang';
+import * as tsm from 'sect10-typescript/src/mathlang';
 import { setup, exprReduce, myshow, Qualifies, Drinks, extendRecord } from './generated';
 
 const mengs_output = { "index":0

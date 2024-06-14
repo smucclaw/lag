@@ -1,0 +1,19 @@
+{
+  "name": "lagts",
+  "version": "1.0.0",
+  "main": "generated.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "openai": "^4.51.0",
+    "sect10-typescript": "file:../../usecases/sect10-typescript"
+  }
+}

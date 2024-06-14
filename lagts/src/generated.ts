@@ -1,5 +1,5 @@
-import * as tsm from '../../usecases/sect10-typescript/src/mathlang';
-export { exprReduce, asDot } from '../../usecases/sect10-typescript/src/mathlang';
+import * as tsm from 'sect10-typescript/src/mathlang';
+export { exprReduce, asDot } from 'sect10-typescript/src/mathlang';
 
 // sets up a global variable tsm.symTab. Also copied from Meng's usecases code
 export function setup (symtab : any) {
