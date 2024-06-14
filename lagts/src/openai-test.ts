@@ -6,8 +6,14 @@ const chatTool: OpenAI.ChatCompletionTool = {
   type: 'function',
   function: {
     name: 'compute_qualifies',
-    description:
-      "Determines if a person qualifies for the purposes of the rule. The input object describes the person's properties in the primary parameters: walks, eats, drinks. Secondary parameters can be given which are sufficient to determine some of the primary parameters. A person drinks whether or not they consume an alcoholic or a non-alcoholic beverage, in part or in whole; those specific details don't really matter. The output of the function can be either a request for required information; a restatement of the user input requesting confirmation prior to function calling; or a Boolean answer with optional explanation summary.",
+    description: `Determines if a person qualifies for the purposes of the rule.
+      The input object describes the person's properties in the primary parameters: walks, eats, drinks.
+      Secondary parameters can be given which are sufficient to determine some of the primary parameters.
+      A person drinks whether or not they consume an alcoholic or a non-alcoholic beverage, in part or in whole;
+      those specific details don't really matter.
+      The output of the function can be either a request for required information;
+      a restatement of the user input requesting confirmation prior to function calling;
+      or a Boolean answer with optional explanation summary.`,
     parameters: {
       type: 'object',
       properties: {
@@ -53,8 +59,12 @@ async function main() {
     messages: [
       {
         role: 'system',
-        content:
-          "You are a helpful assistant. Some queries will require calling an external function. Importantly, don't make assumptions about what values to plug into functions! Ask for clarification if a user request does not give sufficient data. After the facts have been collected, do not attempt to reason through the logic; instead, always call the function to evaluate the logic and obtain an answer. When delivering the final answer to the user, give a detailed explanation.",
+        content: `You are a helpful assistant. Some queries will require calling an external function.
+        Importantly, don't make assumptions about what values to plug into functions!
+        Ask for clarification if a user request does not give sufficient data.
+        After the facts have been collected, do not attempt to reason through the logic;
+        instead, always call the function to evaluate the logic and obtain an answer.
+        When delivering the final answer to the user, give a detailed explanation.`,
       },
       {role: 'user', content: 'Hi! Help me determine if a person qualifies.'},
 
@@ -76,8 +86,11 @@ async function main() {
 
       {
         role: 'assistant',
-        content:
-          'I need some additional information to determine if the person qualifies. Could you please provide the following details:\n\n1. Did the person walk? (true/false/unknown)\n2. Did the person eat? (true/false/unknown)\n3. Did the person drink? (true/false/unknown)',
+        content: `I need some additional information to determine if the person qualifies.
+        Could you please provide the following details:
+        1. Did the person walk? (true/false/unknown)
+        2. Did the person eat? (true/false/unknown)
+        3. Did the person drink? (true/false/unknown)`,
       },
 
       {role: 'user', content: 'I know they did not walk.'},
@@ -121,8 +134,12 @@ async function main() {
 
       {
         role: 'assistant',
-        content:
-          "Based on the information you've provided:\n- The person did not walk.\n- It's unknown if the person ate.\n- The person drank a beverage, but it is uncertain whether it was alcoholic or not.\n\nLet's confirm with the following statement before I proceed with determining if the person qualifies: \nThe person did not walk, they drank a beverage, and we don't know if they ate. Is this correct?",
+        content: `Based on the information you've provided:
+            - The person did not walk.
+            - It's unknown if the person ate.
+            - The person drank a beverage, but it is uncertain whether it was alcoholic or not.
+          Let's confirm with the following statement before I proceed with determining if the person qualifies:
+          The person did not walk, they drank a beverage, and we don't know if they ate. Is this correct?`,
       },
 
       {role: 'user', content: 'Yes, those facts are correct.'},
@@ -149,8 +166,10 @@ async function main() {
 
       {
         role: 'assistant',
-        content:
-          'Based on the information provided, the person does not qualify because they did not walk. \n\nThe rule requires the person to have walked and then to have either eaten or drunk something. Since the person did not walk, they do not meet the necessary conditions.',
+        content: `Based on the information provided, the person does not qualify because they did not walk.
+          
+          The rule requires the person to have walked and then to have either eaten or drunk something.
+          Since the person did not walk, they do not meet the necessary conditions.`,
       },
     ],
     model: 'gpt-4o',
