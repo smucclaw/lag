@@ -1,6 +1,6 @@
 # LAG: Logic Augmented Generation
 
-*a reasoner and explanation engine backend for LLM-based AI applications*
+*LAG provides a logical rule-based reasoner and explanation engine backend for LLM-based AI applications*
 
 This repository explains the motivation for LAG and aims to offer a
 working prototype demonstrating integration with ChatGPT, Llama, Groq,
