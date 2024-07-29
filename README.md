@@ -42,6 +42,8 @@ fundamentally different architecture -- symbolic, rather than neural
 -- is required for structured reasoning in high-stakes domains to do with law,
 contracts, and money.
 
+Many have said this. Most recently Gary Marcus makes the case at length; see for instance [this post dated July 28 2024](https://garymarcus.substack.com/p/alphaproof-alphageometry-chatgpt).
+
 ## Context: Application Background and Pain Points
 
 We consider a scenario in which an existing third-party chatbot app
